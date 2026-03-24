@@ -64,7 +64,19 @@ Home Visit → Product Click → View Product → Buy Click → Checkout
    npm run build
    ```
 
-## 📁 Project Structure
+## � Deployment to GitHub Pages
+
+1. **Deploy to GitHub Pages:**
+   ```bash
+   npm run deploy
+   ```
+
+2. **Access your live site:**
+   Visit: `https://a3v1.github.io/Beverage_analytics/`
+
+**Note:** Make sure GitHub Pages is enabled in your repository settings under "Pages" section, with source set to "Deploy from a branch" and branch set to `gh-pages`.
+
+## �📁 Project Structure
 
 ```
 src/
