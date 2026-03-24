@@ -15,47 +15,44 @@ const ProductCard = ({ product }) => {
   };
 
   return (
-    <div style={{
-      border: '1px solid #ddd',
-      borderRadius: '10px',
-      padding: '1rem',
-      margin: '1rem',
-      textAlign: 'center',
-      backgroundColor: '#fff',
-      boxShadow: '0 4px 8px rgba(0,0,0,0.1)'
-    }}>
+    <div className="card">
       <img
         src={product.image}
         alt={product.name}
-        style={{ width: '100%', height: '200px', objectFit: 'cover', borderRadius: '5px' }}
         onClick={handleProductClick}
       />
-      <h3>{product.name}</h3>
-      <p>{product.description}</p>
-      <p style={{ fontWeight: 'bold', color: '#ff0000' }}>${product.price}</p>
-      <div style={{ display: 'flex', gap: '0.5rem', justifyContent: 'center' }}>
-        <Link to={`/product/${product.id}`}>
-          <button onClick={handleViewDetails} style={{
-            backgroundColor: '#007bff',
-            color: '#fff',
-            border: 'none',
-            padding: '0.5rem 1rem',
-            cursor: 'pointer',
-            borderRadius: '5px'
-          }}>
-            View Details
-          </button>
-        </Link>
-        <button onClick={handleBuyNow} style={{
-          backgroundColor: '#28a745',
-          color: '#fff',
-          border: 'none',
-          padding: '0.5rem 1rem',
-          cursor: 'pointer',
-          borderRadius: '5px'
-        }}>
-          Buy Now
-        </button>
+      <div className="card-content">
+        <div>
+          <h3>{product.name}</h3>
+          <p>{product.description}</p>
+        </div>
+        <div>
+          <p style={{ fontWeight: 'bold', color: '#ffcc00' }}>${product.price}</p>
+          <div style={{ display: 'flex', gap: '0.5rem', justifyContent: 'center' }}>
+            <Link to={`/product/${product.id}`}>
+              <button onClick={handleViewDetails} style={{
+                background: 'linear-gradient(90deg, #0063f0, #00d4ff)',
+                color: '#fff',
+                border: 'none',
+                padding: '0.5rem 1rem',
+                cursor: 'pointer',
+                borderRadius: '999px'
+              }}>
+                View Details
+              </button>
+            </Link>
+            <button onClick={handleBuyNow} style={{
+              background: 'linear-gradient(90deg, #12c25f, #00e881)',
+              color: '#fff',
+              border: 'none',
+              padding: '0.5rem 1rem',
+              cursor: 'pointer',
+              borderRadius: '999px'
+            }}>
+              Buy Now
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   );

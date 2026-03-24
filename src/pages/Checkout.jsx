@@ -36,8 +36,9 @@ const Checkout = () => {
   return (
     <div>
       <Navbar />
-      <section style={{ padding: '2rem', maxWidth: '600px', margin: '0 auto' }}>
-        <h1 style={{ textAlign: 'center', marginBottom: '2rem' }}>Checkout</h1>
+      <section className="section" style={{ maxWidth: '720px', margin: '2rem auto', background: 'rgba(20,20,20,0.9)', borderRadius: '16px' }}>
+        <div style={{ padding: '2rem' }}>
+          <h1 style={{ textAlign: 'center', marginBottom: '1.5rem' }}>Checkout</h1>
         
         <div style={{ marginBottom: '2rem', padding: '1rem', border: '1px solid #ddd', borderRadius: '5px' }}>
           <h3>Order Summary</h3>
@@ -116,18 +117,20 @@ const Checkout = () => {
           </div>
 
           <button type="submit" style={{
-            backgroundColor: '#28a745',
-            color: '#fff',
+            backgroundImage: 'linear-gradient(90deg, #28e05c, #10c33d)',
+            color: '#000',
             border: 'none',
             padding: '1rem',
             fontSize: '1.2rem',
             cursor: 'pointer',
-            borderRadius: '5px',
-            marginTop: '1rem'
+            borderRadius: '999px',
+            marginTop: '1rem',
+            fontWeight: 700
           }}>
             Complete Order
           </button>
         </form>
+      </div>
       </section>
     </div>
   );
