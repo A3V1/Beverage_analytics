@@ -2,20 +2,15 @@
 
 A demo React application inspired by Red Bull's high-energy brand, designed to showcase advanced user behavior analytics and conversion funnel tracking.
 
-## 🚀 Features
+## 🚀 Live Demo
 
-- **High-Energy UI**: Sports and adrenaline-themed design
-- **Product Showcase**: Red Bull Original, Sugar Free, and Editions
-- **Event Tracking**: F1, Air Racing, Cliff Diving, and more
-- **Analytics Integration**: Custom tracking system for user behavior
-- **Conversion Funnel**: Home → Product → Checkout flow
+**View the live site:** https://a3v1.github.io/Beverage_analytics/
 
 ## 📊 Analytics Strategy
 
 This project demonstrates production-level analytics implementation:
 
 ### Tracked Events
-
 - Page views and navigation
 - Product clicks and views
 - Buy button interactions
@@ -24,7 +19,6 @@ This project demonstrates production-level analytics implementation:
 - Conversion funnel progress
 
 ### Funnel Tracking
-
 ```
 Home Visit → Product Click → View Product → Buy Click → Checkout
 ```
@@ -39,13 +33,11 @@ Home Visit → Product Click → View Product → Buy Click → Checkout
 ## 🚀 Getting Started
 
 1. **Install dependencies:**
-
    ```bash
    npm install
    ```
 
 2. **Start development server:**
-
    ```bash
    npm run dev
    ```
@@ -53,30 +45,15 @@ Home Visit → Product Click → View Product → Buy Click → Checkout
 3. **Open your browser:**
    Navigate to `http://localhost:5173`
 
-4. **Lint the code:**
+## 🚀 Deployment
 
-   ```bash
-   npm run lint
-   ```
+This project is automatically deployed to GitHub Pages using GitHub Actions.
 
-5. **Build for production:**
-   ```bash
-   npm run build
-   ```
+- **Build Command:** `npm run build`
+- **Deploy Branch:** `gh-pages`
+- **Live URL:** https://a3v1.github.io/Beverage_analytics/
 
-## � Deployment to GitHub Pages
-
-1. **Deploy to GitHub Pages:**
-   ```bash
-   npm run deploy
-   ```
-
-2. **Access your live site:**
-   Visit: `https://a3v1.github.io/Beverage_analytics/`
-
-**Note:** Make sure GitHub Pages is enabled in your repository settings under "Pages" section, with source set to "Deploy from a branch" and branch set to `gh-pages`.
-
-## �📁 Project Structure
+## 📁 Project Structure
 
 ```
 src/
@@ -119,14 +96,6 @@ This project stands out by:
 ## ⚠️ Important Note
 
 This is a **demo/inspired project** for portfolio purposes only. It is not affiliated with or an official representation of Red Bull or their products.
-
-## 🔧 Customization
-
-To integrate with real analytics services:
-
-1. Replace console.log in `tracker.js` with your analytics provider
-2. Add proper event mapping for your specific needs
-3. Implement server-side tracking if required
 
 ---
 
