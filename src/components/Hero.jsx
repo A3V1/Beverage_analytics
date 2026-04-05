@@ -1,19 +1,29 @@
+import { useNavigate } from 'react-router-dom';
 import tracker from '../analytics/tracker';
 
 const Hero = () => {
-  const handleCTAClick = (action) => {
+  const navigate = useNavigate();
+
+  const handleCTAClick = (action, route) => {
     tracker.trackEvent('cta_click', 'engagement', action);
+    navigate(route);
   };
 
   return (
     <section className="hero">
       <div className="hero-content">
-        <h1>Gives You Wings</h1>
-        <p>Experience the ultimate energy boost with high-octane sport and event experiences.</p>
-        <div className="cta-group">
-          <button onClick={() => handleCTAClick('explore_products')}>Explore Products</button>
-          <button onClick={() => handleCTAClick('view_events')}>View Events</button>
-        </div>
+        <h1>Fresh Beverages Delivered</h1>
+        <p>
+          Explore a wide range of refreshing drinks, juices, coffee, and cool beverages.
+        </p>
+
+        <button onClick={() => handleCTAClick('shop_drinks', '/products')}>
+          Shop Drinks
+        </button>
+
+        <button onClick={() => handleCTAClick('browse_products', '/products')}>
+          Browse Products
+        </button>
       </div>
     </section>
   );

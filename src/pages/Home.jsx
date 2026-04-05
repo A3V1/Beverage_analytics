@@ -14,32 +14,32 @@ const Home = () => {
   const featuredProducts = [
     {
       id: 1,
-      name: 'Red Bull Original',
-      description: 'The original energy drink that gives you wings.',
-      price: 2.99,
-      image: 'https://images.unsplash.com/photo-1528809579230-b606d85d5f70?auto=format&fit=crop&w=1200&q=80'
+      name: 'Orange Juice',
+      description: 'Fresh and natural orange juice',
+      price: 80,
+      image: 'https://images.unsplash.com/photo-1577801597460-5eec6d0c8e07?auto=format&fit=crop&w=1200&q=80'
     },
     {
       id: 2,
-      name: 'Red Bull Sugar Free',
-      description: 'All the energy, zero sugar.',
-      price: 2.99,
-      image: 'https://images.unsplash.com/photo-1566476532527-84826c8d0820?auto=format&fit=crop&w=1200&q=80'
+      name: 'Cold Coffee',
+      description: 'Chilled coffee with cream',
+      price: 120,
+      image: 'https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=1200&q=80'
     }
   ];
 
   const featuredEvents = [
     {
-      name: 'F1 Grand Prix',
-      description: 'Experience the thrill of Formula 1 racing.',
+      name: 'Beverage Fest',
+      description: 'Explore refreshing drinks and offers.',
       date: 'June 15, 2024',
-      image: 'https://images.unsplash.com/photo-1549921296-a52b6a6a1fdd?auto=format&fit=crop&w=1200&q=80'
+      image: 'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1200&q=80'
     },
     {
-      name: 'Air Race World Championship',
-      description: 'Watch the fastest pilots in the world.',
+      name: 'Coffee Meetup',
+      description: 'Meet coffee lovers and taste new blends.',
       date: 'July 20, 2024',
-      image: 'https://images.unsplash.com/photo-1444653614773-995cb1ef9efa?auto=format&fit=crop&w=1200&q=80'
+      image: 'https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=1200&q=80'
     }
   ];
 
@@ -47,24 +47,34 @@ const Home = () => {
     <div>
       <Navbar />
       <Hero />
-      <section className="section" style={{background: 'linear-gradient(to bottom, rgba(15,15,15,.9), rgba(15,15,15,.95))'}}>
-        <h2>Featured Products</h2>
+
+      <section className="section">
+        <h2>Featured Beverages</h2>
         <div className="grid">
           {featuredProducts.map(product => (
             <ProductCard key={product.id} product={product} />
           ))}
         </div>
       </section>
+
       <section className="section">
-        <h2>Upcoming Events</h2>
+        <h2>Events & Promotions</h2>
         <div className="grid">
           {featuredEvents.map((event, index) => (
             <EventCard key={index} event={event} />
           ))}
         </div>
       </section>
-      <CTA text="Ready to feel the energy?" link="/products" buttonText="Shop Now" />
-      <footer className="footer">© {new Date().getFullYear()} Red Bull Experience Analytics &ndash; Demo project</footer>
+
+      <CTA
+        text="Discover your favorite beverages today!"
+        link="/products"
+        buttonText="Shop Now"
+      />
+
+      <footer className="footer">
+        © {new Date().getFullYear()} Beverage Store Analytics – Demo Project
+      </footer>
     </div>
   );
 };

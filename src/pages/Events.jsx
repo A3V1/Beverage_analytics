@@ -10,37 +10,47 @@ const Events = () => {
 
   const events = [
     {
-      name: 'F1 Grand Prix',
-      description: 'Experience the thrill of Formula 1 racing.',
+      name: 'Summer Beverage Fest',
+      description: 'Enjoy refreshing drinks and exclusive discounts.',
       date: 'June 15, 2024',
-      image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+      image: 'https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=800&q=80'
     },
     {
-      name: 'Air Race World Championship',
-      description: 'Watch the fastest pilots in the world.',
+      name: 'Coffee Lovers Meetup',
+      description: 'Taste premium coffee blends and meet enthusiasts.',
       date: 'July 20, 2024',
-      image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+      image: 'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=800&q=80'
     },
     {
-      name: 'Red Bull Cliff Diving',
-      description: 'Extreme cliff diving competition.',
+      name: 'Mocktail Night',
+      description: 'Explore creative mocktails and flavors.',
       date: 'August 10, 2024',
-      image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+      image: 'https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=800&q=80'
     },
     {
-      name: 'Red Bull Rampage',
-      description: 'Mountain biking at its most extreme.',
+      name: 'Healthy Drinks Workshop',
+      description: 'Learn to make healthy juices and smoothies.',
       date: 'September 5, 2024',
-      image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+      image: 'https://images.unsplash.com/photo-1572441710534-6809e4c6dc5b?auto=format&fit=crop&w=800&q=80'
     }
   ];
 
   return (
     <div>
       <Navbar />
+
       <section style={{ padding: '2rem' }}>
-        <h1 style={{ textAlign: 'center', marginBottom: '2rem' }}>Red Bull Events</h1>
-        <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap' }}>
+        <h1 style={{ textAlign: 'center', marginBottom: '2rem' }}>
+          Beverage Events & Promotions
+        </h1>
+
+        <div
+          style={{
+            display: 'flex',
+            justifyContent: 'center',
+            flexWrap: 'wrap'
+          }}
+        >
           {events.map((event, index) => (
             <EventCard key={index} event={event} />
           ))}
