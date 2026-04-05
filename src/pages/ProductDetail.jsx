@@ -10,38 +10,37 @@ const ProductDetail = () => {
   useEffect(() => {
     // Mock product data - in real app, fetch from API
     const products = [
-      {
-        id: 1,
-        name: 'Red Bull Original',
-        description: 'The original energy drink that gives you wings. Perfect for when you need that extra boost.',
-        price: 2.99,
-        image: 'https://images.unsplash.com/photo-1629203851122-3726ecdf080e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-        details: '250ml can, 80mg caffeine, taurine, B-vitamins'
-      },
-      {
-        id: 2,
-        name: 'Red Bull Sugar Free',
-        description: 'All the energy, zero sugar. Great for health-conscious consumers.',
-        price: 2.99,
-        image: 'https://images.unsplash.com/photo-1629203851122-3726ecdf080e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-        details: '250ml can, 80mg caffeine, zero sugar, aspartame'
-      },
-      {
-        id: 3,
-        name: 'Red Bull Tropical',
-        description: 'Tropical flavor for an exotic energy boost.',
-        price: 3.49,
-        image: 'https://images.unsplash.com/photo-1629203851122-3726ecdf080e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-        details: '250ml can, tropical fruit flavor, 80mg caffeine'
-      },
-      {
-        id: 4,
-        name: 'Red Bull Watermelon',
-        description: 'Refreshing watermelon flavor.',
-        price: 3.49,
-        image: 'https://images.unsplash.com/photo-1629203851122-3726ecdf080e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-        details: '250ml can, watermelon flavor, 80mg caffeine'
-      }
+    {  id: 1,
+    name: 'Orange Juice',
+    description: 'Fresh and natural orange juice packed with vitamin C.',
+    price: 80,
+    image: 'https://images.unsplash.com/photo-1577801597460-5eec6d0c8e07?auto=format&fit=crop&w=800&q=80',
+    details: '300ml glass, no added sugar, rich in Vitamin C'
+  },
+  {
+    id: 2,
+    name: 'Cold Coffee',
+    description: 'Chilled coffee with cream and ice.',
+    price: 120,
+    image: 'https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=800&q=80',
+    details: '350ml, creamy texture, moderate caffeine'
+  },
+  {
+    id: 3,
+    name: 'Lemon Soda',
+    description: 'Refreshing fizzy lemon drink.',
+    price: 60,
+    image: 'https://images.unsplash.com/photo-1582450871972-ab5ca641643d?auto=format&fit=crop&w=800&q=80',
+    details: '250ml, carbonated, tangy flavor'
+  },
+  {
+    id: 4,
+    name: 'Strawberry Shake',
+    description: 'Sweet and creamy strawberry milkshake.',
+    price: 140,
+    image: 'https://images.unsplash.com/photo-1579954115567-dff2eeb6fdeb?auto=format&fit=crop&w=800&q=80',
+    details: '400ml, milk-based, rich and thick'
+  }
     ];
 
     const foundProduct = products.find(p => p.id === parseInt(id));
@@ -64,7 +63,7 @@ const ProductDetail = () => {
     <div>
       <Navbar />
       <section style={{ padding: '2rem', maxWidth: '800px', margin: '0 auto' }}>
-        <div style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
+        <div style={{ display: 'flex', gap: '2rem', alignItems: 'center', flexWrap : 'wrap' }}>
           <img
             src={product.image}
             alt={product.name}
@@ -73,7 +72,7 @@ const ProductDetail = () => {
           <div>
             <h1>{product.name}</h1>
             <p style={{ fontSize: '1.2rem', marginBottom: '1rem' }}>{product.description}</p>
-            <p style={{ fontWeight: 'bold', fontSize: '1.5rem', color: '#ff0000', marginBottom: '1rem' }}>${product.price}</p>
+            <p style={{ fontWeight: 'bold', fontSize: '1.5rem', color: '#333', marginBottom: '1rem' }}>Ru{product.price}</p>
             <p style={{ marginBottom: '2rem' }}>{product.details}</p>
             <Link to="/checkout">
               <button onClick={handleBuyNow} style={{

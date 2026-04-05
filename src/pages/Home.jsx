@@ -14,32 +14,32 @@ const Home = () => {
   const featuredProducts = [
     {
       id: 1,
-      name: 'Red Bull Original',
-      description: 'The original energy drink that gives you wings.',
-      price: 2.99,
-      image: 'https://images.unsplash.com/photo-1629203851122-3726ecdf080e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+      name: 'Orange Juice',
+      description: 'Fresh and natural orange juice',
+      price: 80,
+      image: 'https://images.unsplash.com/photo-1577801597460-5eec6d0c8e07?auto=format&fit=crop&w=1200&q=80'
     },
     {
       id: 2,
-      name: 'Red Bull Sugar Free',
-      description: 'All the energy, zero sugar.',
-      price: 2.99,
-      image: 'https://images.unsplash.com/photo-1629203851122-3726ecdf080e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+      name: 'Cold Coffee',
+      description: 'Chilled coffee with cream',
+      price: 120,
+      image: 'https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=1200&q=80'
     }
   ];
 
   const featuredEvents = [
     {
-      name: 'F1 Grand Prix',
-      description: 'Experience the thrill of Formula 1 racing.',
+      name: 'Beverage Fest',
+      description: 'Explore refreshing drinks and offers.',
       date: 'June 15, 2024',
-      image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+      image: 'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1200&q=80'
     },
     {
-      name: 'Air Race World Championship',
-      description: 'Watch the fastest pilots in the world.',
+      name: 'Coffee Meetup',
+      description: 'Meet coffee lovers and taste new blends.',
       date: 'July 20, 2024',
-      image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+      image: 'https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=1200&q=80'
     }
   ];
 
@@ -47,23 +47,34 @@ const Home = () => {
     <div>
       <Navbar />
       <Hero />
-      <section style={{ padding: '2rem', backgroundColor: '#f8f9fa' }}>
-        <h2 style={{ textAlign: 'center', marginBottom: '2rem' }}>Featured Products</h2>
-        <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap' }}>
+
+      <section className="section">
+        <h2>Featured Beverages</h2>
+        <div className="grid">
           {featuredProducts.map(product => (
             <ProductCard key={product.id} product={product} />
           ))}
         </div>
       </section>
-      <section style={{ padding: '2rem' }}>
-        <h2 style={{ textAlign: 'center', marginBottom: '2rem' }}>Upcoming Events</h2>
-        <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap' }}>
+
+      <section className="section">
+        <h2>Events & Promotions</h2>
+        <div className="grid">
           {featuredEvents.map((event, index) => (
             <EventCard key={index} event={event} />
           ))}
         </div>
       </section>
-      <CTA text="Ready to feel the energy?" link="/products" buttonText="Shop Now" />
+
+      <CTA
+        text="Discover your favorite beverages today!"
+        link="/products"
+        buttonText="Shop Now"
+      />
+
+      <footer className="footer">
+        © {new Date().getFullYear()} Beverage Store Analytics – Demo Project
+      </footer>
     </div>
   );
 };

@@ -8,23 +8,27 @@ const CTA = ({ text, link, buttonText }) => {
 
   return (
     <section style={{
-      backgroundColor: '#ff0000',
+      backgroundColor: '#222',
       color: '#fff',
       padding: '2rem',
       textAlign: 'center'
     }}>
       <h2>{text}</h2>
+
       <Link to={link}>
-        <button onClick={handleCTAClick} style={{
-          backgroundColor: '#fff',
-          color: '#ff0000',
-          border: 'none',
-          padding: '1rem 2rem',
-          fontSize: '1.2rem',
-          cursor: 'pointer',
-          borderRadius: '5px',
-          marginTop: '1rem'
-        }}>
+        <button
+          onClick={handleCTAClick}
+          style={{
+            backgroundColor: '#ff9800',
+            color: '#fff',
+            border: 'none',
+            padding: '0.8rem 1.5rem',
+            fontSize: '1rem',
+            cursor: 'pointer',
+            borderRadius: '6px',
+            marginTop: '1rem'
+          }}
+        >
           {buttonText}
         </button>
       </Link>

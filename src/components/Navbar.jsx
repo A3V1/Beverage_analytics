@@ -7,25 +7,42 @@ const Navbar = () => {
   };
 
   return (
-    <nav style={{
-      backgroundColor: '#000',
-      color: '#fff',
-      padding: '1rem',
-      display: 'flex',
-      justifyContent: 'space-between',
-      alignItems: 'center'
-    }}>
-      <div style={{ fontSize: '1.5rem', fontWeight: 'bold' }}>
-        <Link to="/" onClick={() => handleNavClick('home')} style={{ color: '#fff', textDecoration: 'none' }}>
-          Red Bull Experience
-        </Link>
+    <nav className="navbar">
+      <div className="nav-inner">
+        <div style={{ fontSize: '1.5rem', fontWeight: 'bold' }}>
+          <Link to="/" onClick={() => handleNavClick('home')}>
+            Beverage Store
+          </Link>
+        </div>
+
+        <ul style={{
+          listStyle: 'none',
+          display: 'flex',
+          gap: '1.25rem',
+          margin: 0,
+          padding: 0
+        }}>
+          <li>
+            <Link to="/" onClick={() => handleNavClick('home')}>
+              Home
+            </Link>
+          </li>
+
+          <li>
+            <Link to="/products" onClick={() => handleNavClick('products')}>
+              Beverages
+            </Link>
+          </li>
+
+          {/* Remove Events if not used */}
+
+          <li>
+            <Link to="/checkout" onClick={() => handleNavClick('checkout')}>
+              Cart
+            </Link>
+          </li>
+        </ul>
       </div>
-      <ul style={{ listStyle: 'none', display: 'flex', gap: '2rem', margin: 0, padding: 0 }}>
-        <li><Link to="/" onClick={() => handleNavClick('home')} style={{ color: '#fff', textDecoration: 'none' }}>Home</Link></li>
-        <li><Link to="/products" onClick={() => handleNavClick('products')} style={{ color: '#fff', textDecoration: 'none' }}>Products</Link></li>
-        <li><Link to="/events" onClick={() => handleNavClick('events')} style={{ color: '#fff', textDecoration: 'none' }}>Events</Link></li>
-        <li><Link to="/checkout" onClick={() => handleNavClick('checkout')} style={{ color: '#fff', textDecoration: 'none' }}>Order</Link></li>
-      </ul>
     </nav>
   );
 };

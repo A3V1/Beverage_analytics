@@ -1,11 +1,11 @@
-// Analytics Tracker for Red Bull Experience Website
+// Analytics Tracker for Beverage Store Website
 // This is a demo tracker - in production, integrate with Google Analytics, Mixpanel, etc.
 
 class AnalyticsTracker {
   constructor() {
     this.events = [];
     this.funnel = {
-      home_visit: false,
+      homepage_visit: false,
       product_click: false,
       view_product: false,
       buy_click: false,
@@ -38,7 +38,7 @@ class AnalyticsTracker {
   updateFunnel(eventName, label) {
     switch (eventName) {
       case 'page_view':
-        if (label === 'home') this.funnel.home_visit = true;
+        if (label === 'home') this.funnel.homepage_visit = true;
         break;
       case 'product_click':
         this.funnel.product_click = true;
